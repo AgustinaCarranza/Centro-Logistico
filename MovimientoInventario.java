@@ -26,28 +26,26 @@ public class MovimientoInventario {
         if (tipo.equalsIgnoreCase("ENTRADA")) { // "equalsIgnoreCase" ignora mayusculas y minusculas
             producto.setStock(producto.getStock() + cantidad);// agrega unidades al stock
         } else if (tipo.equalsIgnoreCase("SALIDA")) {
-            producto.setStock(producto.getStock() - cantidad); // quita unidades al stock
+            if (producto.getStock() >= cantidad) { // se fija si la cantidad
+                producto.setStock(producto.getStock() - cantidad);// quita unidades al stock
+            } else {
+                System.out.println("Error: stock insuficiente para realizar la salida");
+            }
         }
     }
 
-    //sale error con este
-    //public void mostrarDettalles() {
-    // System.out.println("Movimiento: " + tipo + "Producto: " + producto
-    //            + "Codigo: " + producto.getCodigo() + "Cantidad" + cantidad
-    //            + "Stock actual: " + producto.getStock());
-    //}
+
+            //sale error con este
+            //public void mostrarDettalles() {
+            // System.out.println("Movimiento: " + tipo + "Producto: " + producto
+            //            + "Codigo: " + producto.getCodigo() + "Cantidad" + cantidad
+            //            + "Stock actual: " + producto.getStock());
+            //}
 
 
-    public String mostrarDetalles() {
-        return "Movimiento: " + tipo +
-                " | Producto: " + producto.getNombre() +
-                " | Código: " + producto.getCodigo() +
-                " | Cantidad: " + cantidad +
-                " | Stock actual: " + producto.getStock();
+            public String mostrarDetalles () {
+                return "Movimiento: " + tipo +  " |Producto: " + producto.getNombre() +
+                        " |Código: " + producto.getCodigo() + " | Cantidad: " + cantidad +
+                        " | Stock actual: " + producto.getStock();
+            }
         }
-
-
-    }
-
-
-
