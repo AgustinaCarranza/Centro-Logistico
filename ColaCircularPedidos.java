@@ -1,5 +1,3 @@
-package TPO;
-
 public class ColaCircularPedidos {
 
     private Pedido[] cola;
