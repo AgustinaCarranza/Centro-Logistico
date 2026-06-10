@@ -20,6 +20,32 @@ public class Main {
         //nos permite buscar por codigo un producto
         Producto buscado = diccionario.recuperar(90988980);
         System.out.println("Encontrado " + buscado.getNombre());
+
+        //guarda los movimientos de inventario
+        PilaMovimientos pila = new PilaMovimientos();
+
+        pila.apilar(entrada);
+        pila.apilar(salida);
+
+        MovimientoInventario ultimo = pila.desapilar();
+
+        System.out.println("Último " + ultimo.mostrarDetalles());
+
+        //representa un pedido compuesto por uno o varios productos
+        Pedido pedido = new Pedido(1, 5);
+
+        pedido.agregarProducto(p1);
+        pedido.agregarProducto(p2);
+
+        //administra los pedidos en orden de llegada mediante una cola circular
+        ColaCircularPedidos cola = new ColaCircularPedidos(5);
+
+        cola.encolar(pedido);
+
+        Pedido atendido = cola.desencolar();
+
+        System.out.println("Pedido atendido: " + atendido.getId());
+        
     }
 
 }
