@@ -8,4 +8,5 @@ Actividades realizadas por cada integrante:
 Agustina Carranza:
 ConjuntoCodigos, DiccionarioProductos, MovimientoInventario, NodoMovimiento, PilaMovimientos, Producto
 Ignacio Agustin Santos:
+ColaCircularPedidos,
 
