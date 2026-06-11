@@ -6,7 +6,7 @@ Funcionalidades implementadas en esta segunda etapa: Localizacion de stock, Movi
 Link del repositorio: https://github.com/AgustinaCarranza/CentroLogistico
 Actividades realizadas por cada integrante: 
 Agustina Carranza:
-ConjuntoCodigos, DiccionarioProductos, MovimientoInventario, NodoMovimiento, PilaMovimientos, Producto
+ConjuntoCodigos, DiccionarioProductos, MovimientoInventario, NodoMovimiento, Producto
 Ignacio Agustin Santos:
-ColaCircularPedidos,
+ColaCircularPedidos, Pedido, PilaMovimientos
 
